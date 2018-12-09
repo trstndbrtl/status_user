@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains status_user.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function status_user_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the status_user module.
+    case 'help.page.status_user':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A module for create, update, delete status for user.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
