@@ -1,0 +1,28 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_su_thematique
+    - node.type.status_user
+    - taxonomy.vocabulary.su_thematiques
+id: node.status_user.field_su_thematique
+field_name: field_su_thematique
+entity_type: node
+bundle: status_user
+label: Thématique
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      su_thematiques: su_thematiques
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+langcode: fr
+status: true
+dependencies: {}
+name: 'Figures status'
+vid: su_figures
+description: 'Liste des auteurs'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,33 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_su_settings
+    - node.type.status_user
+  module:
+    - status_interface
+id: node.status_user.field_su_settings
+field_name: field_su_settings
+entity_type: node
+bundle: status_user
+label: Settings
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    position: 'center center'
+    filter: '0'
+    filter_opacity: '6'
+    font_size: '22'
+    bg_color: '255,255,255'
+    color: '0,0,0'
+default_value_callback: ''
+settings:
+  position: 'center center'
+  filter: 0
+  filter_opacity: 0
+  font_size: 22
+  bg_color: transparent
+  color: '0,0,0'
+field_type: bg_wall_field

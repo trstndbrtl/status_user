@@ -1,0 +1,50 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.status_user.field_su_bg
+    - field.field.node.status_user.field_su_figures
+    - field.field.node.status_user.field_su_legende
+    - field.field.node.status_user.field_su_settings
+    - field.field.node.status_user.field_su_thematique
+    - node.type.status_user
+  module:
+    - user
+id: node.status_user.default
+targetEntityType: node
+bundle: status_user
+mode: default
+content:
+  field_su_figures:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_su_legende:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_su_thematique:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_su_bg: true
+  field_su_settings: true
+  langcode: true

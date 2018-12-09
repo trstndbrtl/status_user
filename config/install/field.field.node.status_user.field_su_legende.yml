@@ -1,0 +1,18 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_su_legende
+    - node.type.status_user
+id: node.status_user.field_su_legende
+field_name: field_su_legende
+entity_type: node
+bundle: status_user
+label: Légende
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

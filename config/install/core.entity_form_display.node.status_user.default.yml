@@ -1,0 +1,131 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.status_user.field_su_bg
+    - field.field.node.status_user.field_su_figures
+    - field.field.node.status_user.field_su_legende
+    - field.field.node.status_user.field_su_settings
+    - field.field.node.status_user.field_su_thematique
+    - node.type.status_user
+  module:
+    - content_moderation
+    - field_layout
+    - layout_discovery
+    - path
+    - status_interface
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.status_user.default
+targetEntityType: node
+bundle: status_user
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_su_bg:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: 'Pour ajouter une image de fond, utilisez ce champs.'
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_su_figures:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: 'Pour ajouter un auteur, utilisez ce champs.'
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_su_legende:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: 'Pour ajouter une légende, utilisez ce champs (max 125 caractères).'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_su_settings:
+    weight: 5
+    settings:
+      fieldset_state: open
+    third_party_settings: {  }
+    type: bg_wall_widget
+    region: content
+  field_su_thematique:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: 'Pour ajouter des thématiques, utilisez ce champs. (ex: Histoire Cinéma, Peintures, Photographies).'
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  langcode:
+    type: language_select
+    weight: 6
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 12
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 13
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 10
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Votre status ne doit pas dépasser plus de 255 caractéres.'
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

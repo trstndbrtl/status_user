@@ -1,0 +1,8 @@
+langcode: fr
+status: true
+dependencies: {}
+name: 'Thématiques status'
+vid: su_thematiques
+description: 'Liste de thématiques'
+hierarchy: 0
+weight: 0
