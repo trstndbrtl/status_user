@@ -13,7 +13,7 @@ dependencies:
     - field_layout
     - layout_discovery
     - path
-    - status_interface
+    - status_user
 third_party_settings:
   field_layout:
     id: layout_onecol

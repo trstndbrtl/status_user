@@ -3,13 +3,13 @@ status: true
 dependencies:
   module:
     - node
-    - status_interface
+    - status_user
 id: node.field_su_settings
 field_name: field_su_settings
 entity_type: node
 type: bg_wall_field
 settings: {  }
-module: status_interface
+module: status_user
 locked: false
 cardinality: 1
 translatable: true

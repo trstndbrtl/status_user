@@ -4,7 +4,7 @@ dependencies:
   module:
     - node
     - taxonomy
-    - status_interface
+    - status_user
 id: node.field_su_figures
 field_name: field_su_figures
 entity_type: node

@@ -3,7 +3,7 @@ status: true
 dependencies:
   module:
     - node
-    - status_interface
+    - status_user
 id: node.field_su_legende
 field_name: field_su_legende
 entity_type: node

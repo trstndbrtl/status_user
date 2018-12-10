@@ -5,7 +5,7 @@ dependencies:
     - field.storage.node.field_su_settings
     - node.type.status_user
   module:
-    - status_interface
+    - status_user
 id: node.status_user.field_su_settings
 field_name: field_su_settings
 entity_type: node

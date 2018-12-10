@@ -1,0 +1,22 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_su_active
+  module:
+    - options
+    - user
+id: user.user.field_su_active
+field_name: field_su_active
+entity_type: user
+bundle: user
+label: 'Status page'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

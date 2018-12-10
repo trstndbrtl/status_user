@@ -4,7 +4,7 @@ dependencies:
   module:
     - media
     - node
-    - status_interface
+    - status_user
 id: node.field_su_bg
 field_name: field_su_bg
 entity_type: node
