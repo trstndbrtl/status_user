@@ -1,0 +1,8 @@
+entity.user.status_page:
+  path: '/user/{user}/status'
+  defaults:
+    _controller: '\Drupal\status_user\Controller\PageStatusController::showStatusPage'
+    _title: 'Status Page'
+  requirements:
+    _custom_access: '\Drupal\status_user\Controller\PageStatusController::access'
+    user: \d+
