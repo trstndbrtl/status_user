@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\status_interface\Plugin\Field\FieldType;
+namespace Drupal\status_user\Plugin\Field\FieldType;
 
 use Drupal\Component\Utility\Random;
 use Drupal\Core\Field\FieldDefinitionInterface;

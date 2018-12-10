@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\status_interface\Plugin\Field\FieldWidget;
+namespace Drupal\status_user\Plugin\Field\FieldWidget;
 
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\WidgetBase;

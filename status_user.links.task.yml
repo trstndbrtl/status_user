@@ -1,0 +1,4 @@
+entity.user.status_page:
+  title: Status
+  route_name: entity.user.status_page
+  base_route: entity.user.canonical

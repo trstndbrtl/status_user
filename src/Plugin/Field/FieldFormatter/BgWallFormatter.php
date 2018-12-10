@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\status_interface\Plugin\Field\FieldFormatter;
+namespace Drupal\status_user\Plugin\Field\FieldFormatter;
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Field\FieldItemInterface;
