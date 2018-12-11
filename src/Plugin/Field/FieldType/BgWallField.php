@@ -63,7 +63,7 @@ class BgWallField extends FieldItemBase {
    */
   public static function defaultFieldSettings() {
     return [
-        'position' => 'center center',
+        'position' => 'off',
         'filter' => 0,
         'filter_opacity' => 0,
         'font_size' => 22,

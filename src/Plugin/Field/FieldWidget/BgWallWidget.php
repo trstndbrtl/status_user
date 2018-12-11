@@ -70,11 +70,23 @@ class BgWallWidget extends WidgetBase {
       '#description' => $element['#description'],
     ] + $element;
 
+    // $element['details']['position'] = [
+    //   '#title' => t('Bg position'),
+    //   '#default_value' => isset($items[$delta]->bg_position) ? $items[$delta]->bg_position : 'center center',
+    //   '#type' => 'textfield',
+    //   '#required' => FALSE,
+    // ];
+
     $element['details']['position'] = [
-      '#title' => t('Bg position'),
-      '#default_value' => isset($items[$delta]->bg_position) ? $items[$delta]->bg_position : 'center center',
-      '#type' => 'textfield',
+      '#type' => 'select',
+      '#title' => t('Active'),
+      '#options' => [
+        'off' => t('Off'),
+        'on' => t('On'),
+      ],
       '#required' => FALSE,
+      '#empty_option' => t('-select-'),
+      '#default_value' => isset($items[$delta]->bg_position) ? $items[$delta]->bg_position : 'off',
     ];
 
     $element['details']['filter'] = [
