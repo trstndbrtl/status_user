@@ -1,0 +1,4 @@
+bg-lib:
+  css:
+    theme:
+      css/bg.css: {}

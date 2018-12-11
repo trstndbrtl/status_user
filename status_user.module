@@ -27,7 +27,7 @@ function status_user_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function status_interface_theme() {
+function status_user_theme() {
   return array(
     'bg_url_formatter' => array(
       'variables' => array(
@@ -42,8 +42,9 @@ function status_interface_theme() {
 /**
  * Prepares variables for `html.html.twig`.
  */
-function status_interface_preprocess_html(&$variables) {
+function status_user_preprocess_html(&$variables) {
   // Check if current page is a node
+  
   $node = \Drupal::routeMatch()->getParameter('node');
   // If is a node,
   // Check if is a vers content type, if is
@@ -51,16 +52,17 @@ function status_interface_preprocess_html(&$variables) {
   if ($node instanceof \Drupal\node\NodeInterface) {
     if ($node->getType() === 'status_user') {
       if ($node->hasField('field_su_bg') && $node->field_su_bg->getValue() && $node->field_su_bg->getValue()[0]) {
-        $variables['attributes']['class'][] = 'container-fluid-world';
+        $variables['attributes']['class'][] = 'container-bg-world';
         $file = $node->field_su_bg->referencedEntities()[0];
         if ($file->bundle() === 'image' && $file->hasField('field_media_image') && $file->field_media_image->getValue() && $file->field_media_image->getValue()[0]) {
           $image = $file->field_media_image->referencedEntities()[0];
           $image_uri = $image->getFileUri();
           $url = Url::fromUri(file_create_url($image_uri));
-          $variables['attributes']['style'][] = 'background-image:url("'.$url->getUri().'");background-size:cover;background-repeat:no-repeat;min-height:600px;display:flex;align-items:center;justify-content:center;';
+          $variables['attributes']['style'][] = 'background-image:url("'.$url->getUri().'");background-size:cover;background-repeat:no-repeat;min-height:600px;';
+          $variables['#attached']['library'][] = 'status_user/bg-lib';
         }
       }else{
-        $variables['attributes']['style'][] = 'min-height:600px;display:flex;align-items:center;justify-content:center;';
+        $variables['attributes']['style'][] = 'min-height:600px;';
       }
     }
   }

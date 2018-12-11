@@ -1,0 +1,5 @@
+body.container-bg-world #page,
+body.container-bg-world #main-wrapper,
+body.container-bg-world footer.site-footer {
+  background: transparent !important;
+}
